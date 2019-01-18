@@ -16,25 +16,22 @@
       <property name="forceBigDecimals" value="false" />
     </javaTypeResolver>
 
-    <javaModelGenerator targetPackage="com.hu.spider.led.vo" targetProject=".\src\main\java">
+    <javaModelGenerator targetPackage="com.hu.parser.ledparser.vo" targetProject=".\src\main\java">
       <property name="enableSubPackages" value="true" />
       <property name="trimStrings" value="true" />
     </javaModelGenerator>
 
-    <sqlMapGenerator targetPackage="com.hu.spider.led.mapper"  targetProject=".\src\main\java">
+    <sqlMapGenerator targetPackage="com.hu.parser.ledparser.mapper"  targetProject=".\src\main\java">
       <property name="enableSubPackages" value="true" />
     </sqlMapGenerator>
 
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.hu.spider.led.dao"  targetProject=".\src\main\java">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.hu.parser.ledparser.dao"  targetProject=".\src\main\java">
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
 
-    <table schema="LED" tableName="LED_LINK" domainObjectName="LedLink" >
-      <property name="useActualColumnNames" value="true"/>
+    <table schema="LED" tableName="ledpanel" domainObjectName="LedPanel" >
+      <property name="useActualColumnNames" value="false"/>
       <generatedKey column="ID" sqlStatement="MySql" identity="true" />
-      <columnOverride column="link" property="link" />
-      <columnOverride column="file_name" property="fileName"/>
-      <columnOverride column="titile" property="titile"/>
     </table>
 
   </context>
